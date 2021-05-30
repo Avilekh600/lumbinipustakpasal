@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>New Lumbini Pustak pasal</title>
+</head>
+
+<body>
+    <header>
+
+        <p class="heading">New Lumbini Pustak Pasal</p>
+        <P class="mero">Rupandehi Lumbini | Nepal </P>
+
+    </header>
+    <div class="container">
+            <div class="navbar">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#About Us">AboutUs</a></li>
+                    <li><a href="#Contact Us">ContactUs</a></li>
+                    <button class="btn"><a href="#formsection">Sign Up</a></button>
+                </ul>
+            </div>
+            
+        <div id="Home">
+            <table class="center" border="2">
+                <tr>
+                    <th colspan="2"><img src="" class="center" id="img"></th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <p id="C">Change Range To See products !! </p> <input type="range" min="0" max="6" value="6"
+                            id="range" onchange="Change()">
+                    </th>
+                </tr>
+                <tr class="pcolor">
+                    <td>Product ID</td>
+                    <td id="pID"></td>
+                </tr>
+                <tr class="pcolor">
+                    <td>Product Name</td>
+                    <td id="pname"></td>
+                </tr>
+                <tr class="pcolor">
+                    <td>Price</td>
+                    <td id="pprice"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="Services">
+            <div class="s">Our Services</div>
+            <div class="first"> सबै बोर्डिंग र सरकारी स्कूलका पुस्तकहरु</div>
+            <div class="second">फोटोकपी<br>
+                &nbsp; &nbsp; तथा<br>
+                लेमिनेसन</div>
+            <div class="third"> &nbsp; रिचार्जकार्ड<br>
+                &nbsp; &nbsp; &nbsp; तथा<br>
+                ब्यलेंसे ट्रान्सफर</div>
+            <div class="fourth">खेलकुद<br>
+                &nbsp; &nbsp; तथा<br>
+                स्टेसनरी</div>
+
+        </div>
+    </div>
+
+    <!-- login/signup  -->
+
+    <div class="section">
+
+        <div id="About Us">
+            <p class="aboutus">About Us</p>
+            <p class="detail"> <span class="yellow">Limbini Pustak pasal</span> is biggest stationery shop in this area
+                <br> You will find all types of stationery product.
+            </p>
+        </div>
+
+
+        <div id="formsection">
+            <div class="log">
+                <label for="Name">Name:</label><br>
+                <input type="text" name="Name" class="finput" placeholder="Enter Your Name"><br>
+                <label for="Password">Password:</label><br>
+                <input type="password" name="Password" class="finput" placeholder="Enter Password"><br>
+                <label for="Email">Email:</label><br>
+                <input type="email" name="Email" class="finput" placeholder="Enter your email"><br>
+                <fieldset class="frameset">
+                    <legend class="gender">Gender</legend>
+                    <input type="radio" name="gender" value="male" class="gender"><span class="gender">Male</span>
+                    <input type="radio" name="gender" value="female" class="gender"><span class="gender">Female</span>
+                    <input type="radio" name="gender" value="other" class="gender"><span class="gender">other</span>
+                </fieldset>
+                <button class="fbtn">submit</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright © 2020-2021 | Avilekh
+    </footer>
+
+    <!-- javascript section  -->
+
+    <script>
+        function Change() {
+            var Product = [
+                { ID: "1", name: "Index File", price: "Rs.250", photo: "file.jpg" },
+                { ID: "2", name: "Glue Gun", price: "Rs.400", photo: "glue gun.jpg" },
+                { ID: "3", name: " A4 paper", price: "Rs.500", photo: "paper.jpg" },
+                { ID: "4", name: "Pencil", price: "Rs.100", photo: "pencil.jpg" },
+                { ID: "5", name: "Scissor", price: "Rs.150", photo: "scissor.jpg" },
+                { ID: "6", name: "Pencil Color", price: "Rs.100", photo: "color.jpg" }
+            ];
+            var img = document.getElementById("img");
+            var range = document.getElementById("range");
+            var pID = document.getElementById("pID");
+            var price = document.getElementById("pprice");
+            var name = document.getElementById("pname");
+
+            img.src = Product[range.value].photo;
+            name.innerHTML = Product[range.value].name;
+            price.innerHTML = Product[range.value].price;
+            pID.innerHTML = Product[range.value].ID;
+        }
+    </script>
+
+
+</body>
+
+</html>
